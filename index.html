@@ -26,24 +26,33 @@
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
-          <div id="todos">
+        <div class="col-md-5">
 
 
-            <form class="row align-items-start p-2" onsubmit="app.toDosController.addToDo()">
-              <div class="col-md-3 m-2">
-
-
-                <button class="bn632-hover bn27">Button</button>
+          <form class="align-items-start p-2 rounded-top" onsubmit="app.toDosController.addToDo()">
+            <div class="row align-items-start">
+              <div class="col-md-4 rounded-top m-4 text-center">
+                To Dos:
               </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col-md-4 p-3" id="todos">
 
-            </form>
+                <!----To-Do-Template---->
+
+              </div>
+            </div>
+            <div class="row align-items-end g-2">
+              <div class="col-md-4 p-3">
+                <input required minlength="3" maxlength="20" type="text" name="todo" aria-describedby="helpId"
+                  class="form-control input-field" placeholder="Add a task!">
+                <button class="btn btn-outline-primary">
+                  Add</button>
+              </div>
+            </div>
+          </form>
 
 
-
-
-
-          </div>
         </div>
       </div>
     </div>

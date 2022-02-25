@@ -1,1 +1,11 @@
 /* BASIC STYLES HERE */
+
+form {
+  background: bisque;
+  min-height: 300px;
+  margin-top: 5em;
+}
+
+.input-field {
+  min-width: 200px;
+}

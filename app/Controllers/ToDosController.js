@@ -4,24 +4,41 @@ import { Pop } from "../Utils/Pop.js";
 
 
 //Private
-// function _drawToDos() {
-//   let toDos = ProxyState.todos;
-//   let template = ''
-//   toDos.forEach(t => template += t.Template)
-//   document.getElementById("todos").innerHTML = template
+function _drawToDos() {
+  let toDos = ProxyState.todos;
+  let template = ''
+  toDos.forEach(t => template += t.Template)
+  document.getElementById("todo").innerHTML = template
 
-// }
+}
 
 //Public
 export class ToDosController {
-  // constructor() {
-  //   ProxyState.on("ToDos", _drawToDos);
-  //   _drawToDos()
-  // }
+  constructor() {
+    ProxyState.on("todos", _drawToDos);
+    _drawToDos()
+  }
 
-  // addToDo() {
-  //   toDosService.addToDo()
-  // }
+  async addToDo() {
+    try {
+      window.event.preventDefault()
+      let form = window.event.target
+      let newToDo = {
+        // @ts-ignore
+        description: form.description.value
+      }
+      await toDosService.addToDo(FormData)
+
+
+    }
+    catch (error) {
+      console.error(error)
+      Pop.error(error)
+    }
+
+
+    toDosService.addToDo()
+  }
 
   // async removeToDo(id) {
   //   const yes = await Pop.confirm('Remove ToDo')
