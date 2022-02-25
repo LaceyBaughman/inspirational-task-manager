@@ -4,11 +4,28 @@ import { sandBoxApi } from "../Services/AxiosService.js"
 
 class ToDosService {
 
-  constructor() { }
+  constructor() {
+  }
 
-  async addToDo(formData) {
-    let todo
-    ProxyState.todos = [...ProxyState.todos, new ToDo({ title: Math.random() })]
+  async getToDos() {
+    const res = await sandBoxApi.get('')
+    console.log('[ToDoService]; getToDos', res.data)
+    ProxyState.todos = res.data.map(t => new ToDo(t))
+  }
+
+  async addToDo(newTask) {
+    const res = await sandBoxApi.post('', newTask)
+    console.log('[ToDosService]: create todo', res.data)
+    let newDo = new ToDo(res.data)
+    ProxyState.todos = [...ProxyState.todos, newDo]
+  }
+
+  async checkBox(id) {
+    let checks = ProxyState.todos
+    const found = checks.find(ToDo => id == ToDo.id)
+    found.completed = !found.completed
+    const res = await sandBoxApi.put('', + found.id, found)
+    ProxyState.todos = ProxyState.todos
   }
   removeToDo(id) {
     const todos = ProxyState.todos.filter(v => v.id !== id)
