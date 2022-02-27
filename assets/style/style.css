@@ -1,11 +1,21 @@
 /* BASIC STYLES HERE */
 
-form {
-  background: bisque;
-  min-height: 300px;
+.todo-styling {
+  background: rgb(164, 199, 204, 0.7);
+  max-height: 600px;
+  padding-left: 20px;
   margin-top: 5em;
+  margin-left: 2em;
+  border-radius: 15px 70px 15px 15px;
+  font-size: larger;
 }
 
-.input-field {
-  min-width: 200px;
+.quote-styling {
+  background: rgb(164, 199, 204, 0.7);
+  min-height: 200px;
+  min-width: 300px;
+  margin-top: 5em;
+  margin-left: 2em;
+  border-radius: 15px 15px 15px 15px;
 }
+

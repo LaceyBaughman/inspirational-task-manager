@@ -1,11 +1,17 @@
 import { ProxyState } from "../AppState.js"
-import { Pop } from "../Utils/Pop.js"
+import { Quote } from "../Models/Quote.js"
 import { sandBoxApi } from "./AxiosService.js"
 
 
 class QuotesService {
   constructor() {
 
+  }
+  async getQuotes() {
+    //I took out 'quotes' in the perameters 
+    const res = await sandBoxApi.get('quotes')
+    console.log('[QuotesService]; getQuotes', res.data)
+    ProxyState.quotes = new Quote(res.data)
   }
 }
 

@@ -18,43 +18,45 @@
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">check-point-4</span>
+        <span class="ms-2">Landing Page</span>
       </a>
     </nav>
   </header>
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-4">
 
-
-          <form class="align-items-start p-2 rounded-top" onsubmit="app.toDosController.addToDo()">
-            <div class="row align-items-start">
-              <div class="col-md-4 rounded-top m-4 text-center">
-                To Dos:
-              </div>
+          <!----ToDo-Form---->
+          <form class="todo-styling" onsubmit="app.toDosController.addToDo()">
+            <div class="col p-3">
+              To Dos:
             </div>
             <div class="row align-items-center">
-              <div class="col-md-4 p-3" id="todos">
-
+              <div class="col p-3" id="todos">
                 <!----To-Do-Template---->
-
               </div>
             </div>
-            <div class="row align-items-end g-2">
-              <div class="col-md-4 p-3">
-                <input required minlength="3" maxlength="20" type="text" id="description" name="description"
-                  aria-describedby="helpId" class="form-control input-field" placeholder="Add a task!">
-                <button class="btn btn-outline-primary">
-                  Add</button>
+            <div class="row align-items-end">
+              <div class="col p-3 input-group mb-3">
+                <input required type="text" id="description" class="form-control input-field"
+                  placeholder="Add a task..." aria-label="Add a task..." aria-describedby="helpId">
+                <button class="btn btn-outline-secondary" type="submit">Add</button>
               </div>
             </div>
           </form>
+        </div>
+        <!----Quotes---->
+
+        <div class="col-md-6 quote-styling" id="quote">
+
+
+          <!----Quote-Template---->
 
 
         </div>
+
+
       </div>
     </div>
   </main>

@@ -39,7 +39,8 @@ export class ToDosController {
     try {
       await toDosService.getToDos()
     } catch (error) {
-      console.error(error);
+      console.error(error)
+      Pop.error(error)
     }
   }
 
