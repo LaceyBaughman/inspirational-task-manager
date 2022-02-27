@@ -1,22 +1,23 @@
 
 export class Temp {
   constructor(data) {
-    this.temp = data.main.temp
-    // this.fah = data.main.temp
-    // this.cel = data.main.temp
+    this.completed = data.completed || false
+    this.temp = data.main.temp || ''
+    this.fah = ((this.temp - 273.15) * 1.8 + 32).toFixed(2)
+    this.cel = (this.temp - 273.15).toFixed(2)
     console.log('What Temp?', this)
   }
 
-
-
-
   get Template() {
     return `
-    <h2>${this.temp}</h2>
+    <h2>${this.fah}</h2>
   `
   }
 
-
-
+  get CelTemplate() {
+    return `
+  <h2>${this.cel}</h2>
+  `
+  }
 
 }

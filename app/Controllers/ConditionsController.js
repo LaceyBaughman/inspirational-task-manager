@@ -3,8 +3,9 @@ import { conditionsService } from "../Services/ConditionsService.js";
 import { Pop } from "../Utils/Pop.js";
 
 
+
 function _drawTemp() {
-  let temp = ProxyState.weather;
+  let temp = ProxyState.weather
   document.getElementById("temp").innerHTML = temp.Template
 }
 
@@ -35,6 +36,11 @@ export class ConditionsController {
       Pop.error(error)
     }
   }
+
+  switchTemp() {
+    conditionsService.switchTemp()
+  }
+
 }
 
 

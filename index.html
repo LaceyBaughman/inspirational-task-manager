@@ -22,11 +22,23 @@
 <body id="bgImage" class="cover">
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <h2><span class="ms-2" id="temp"></span></h2>
-      </a>
+
+
+
+
+      <div class="form-check form-switch">
+        <p><label class="form-check-label" for="flexSwitchCheckDefault" id="temp"></label></p>
+        <input onclick="if(this.checked){app.conditionsController.switchTemp()}" class="form-check-input"
+          type="checkbox" role="switch" id="flexSwitchCheckDefault" ${this.completed ? 'checked' : '' }>
+      </div>
+
+
+
     </nav>
   </header>
+
+
+
   <main>
     <div class="container-fluid">
       <div class="row">
