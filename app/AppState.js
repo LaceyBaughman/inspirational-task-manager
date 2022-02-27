@@ -6,6 +6,8 @@ class AppState extends EventEmitter {
   todos = []
   image = {}
   quotes = {}
+
+  weather = {}
 }
 
 export const ProxyState = new Proxy(new AppState(), {

@@ -5,8 +5,6 @@ import { quotesService } from "../Services/QuotesService.js";
 
 function _drawQuote() {
   let quote = ProxyState.quotes;
-  let template = ''
-  // quote.forEach(q => template += q.Template)
   document.getElementById("quote").innerHTML = quote.Template
 }
 

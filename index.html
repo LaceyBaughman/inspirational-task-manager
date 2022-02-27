@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <!-- <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <a class="navbar-brand ms-3" href="#">
-        <span class="ms-2">Landing Page</span>
+        <h2><span class="ms-2" id="temp"></span></h2>
       </a>
     </nav>
   </header>
@@ -47,24 +47,29 @@
               <div class="col p-3 input-group mb-3">
                 <input required type="text" id="description" class="form-control input-field"
                   placeholder="Add a task..." aria-label="Add a task..." aria-describedby="helpId">
-                <button class="btn btn-outline-secondary" type="submit">Add</button>
+                <button class="btn btn-secondary" type="submit">Add</button>
               </div>
             </div>
           </form>
         </div>
-        <!----Quotes---->
-
-        <div class="col-md-6 quote-styling" id="quote">
 
 
-          <!----Quote-Template---->
+        <div class="col-md-4 center-col">
+          <div class="row">
+            <div class="col time-styling" id="time">
+              <!----Time---->
+            </div>
+          </div>
 
-
+          <div class="row">
+            <div class="col quote-styling" id="quote">
+              <!----Quote-Template---->
+            </div>
+          </div>
         </div>
 
 
       </div>
-    </div>
   </main>
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
