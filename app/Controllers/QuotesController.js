@@ -4,15 +4,19 @@ import { quotesService } from "../Services/QuotesService.js";
 
 
 
+
 function _drawQuote() {
-  let quote = ProxyState.quotes
-  document.getElementById('clue').innerHTML = quote.template
+  let quote = ProxyState.quotes;
+  let template = ''
+  // quote.forEach(q => template += q.Template)
+  document.getElementById("quote").innerHTML = quote.Template
 }
 
 export class QuotesController {
   constructor() {
     this.getQuotes()
-    ProxyState.on('quote', _drawQuote)
+    ProxyState.on('quotes', _drawQuote)
+
   }
 
   async getQuotes() {

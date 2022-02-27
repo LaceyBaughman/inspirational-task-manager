@@ -5,7 +5,7 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/ToDo').ToDo[]} */
   todos = []
   image = {}
-  quotes = []
+  quotes = {}
 }
 
 export const ProxyState = new Proxy(new AppState(), {
