@@ -1,6 +1,4 @@
 
-
-
 export class Quote {
   constructor(data) {
     this.quote = data.content || ''
@@ -12,8 +10,8 @@ export class Quote {
     <div class="col">
     <h2>${this.quote}</h2>
     </div>
-    <div class="col hide-container answer"><span class="hide">
-    ${this.author}</span>
+    <div class="col hide-container author"><span class="hide"><b>- 
+    ${this.author}</b></span>
     </div>
     `
   }
