@@ -2,11 +2,10 @@ import { ProxyState } from "../AppState.js"
 import { Quote } from "../Models/Quote.js"
 import { sandBoxApi } from "./AxiosService.js"
 
-
 class QuotesService {
   constructor() {
-
   }
+
   async getQuotes() {
     //I took out 'quotes' in the perameters 
     const res = await sandBoxApi.get('quotes')
@@ -14,7 +13,5 @@ class QuotesService {
     ProxyState.quotes = new Quote(res.data)
   }
 }
-
-
 
 export const quotesService = new QuotesService()

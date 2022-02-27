@@ -3,8 +3,6 @@ import { ProxyState } from "../AppState.js";
 import { quotesService } from "../Services/QuotesService.js";
 
 
-
-
 function _drawQuote() {
   let quote = ProxyState.quotes;
   let template = ''
@@ -16,7 +14,6 @@ export class QuotesController {
   constructor() {
     this.getQuotes()
     ProxyState.on('quotes', _drawQuote)
-
   }
 
   async getQuotes() {
