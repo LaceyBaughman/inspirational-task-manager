@@ -1,4 +1,14 @@
 /* BASIC STYLES HERE */
+.row-styling {
+background-color: rgba(18, 25, 39, .8);
+color: rgba(223, 249, 253);
+align-content:center;
+height: 100px;
+}
+
+.stack {
+  display: inline-block;
+}
 
 .todo-styling {
   background: rgba(223, 249, 253, 0.5);
@@ -58,4 +68,12 @@ h2 {
   border-style: dotted;
   font-family: 'Signika Negative', sans-serif;
   padding: 10px;
+}
+
+.footer-styling {
+background-color: rgba(18, 25, 39, .8);
+color: rgba(223, 249, 253);
+align-content: center;
+height: 100px;
+text-align: center;
 }

@@ -10,13 +10,14 @@ export class Temp {
 
   get Template() {
     return `
-    <h2>${this.fah}</h2>
+    <h2>${this.fah} °F </h2>
   `
   }
 
   get CelTemplate() {
     return `
-  <h2>${this.cel}</h2>
+  <h2>${this.cel} °C
+   </h2>
   `
   }
 
