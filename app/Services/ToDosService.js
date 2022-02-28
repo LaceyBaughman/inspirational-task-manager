@@ -10,6 +10,12 @@ class ToDosService {
     const res = await sandBoxApi.get('LaceyBaughman/todos')
     console.log('[ToDoService]; getToDos', res.data)
     ProxyState.todos = res.data.map(t => new ToDo(t))
+    // let tasks = ProxyState.toDos
+    // let totalToDos = tasks.length
+    // let done = tasks.filter(done => done.completed == true)
+    // let totalCompleted = done.length
+    // document.getElementById("completed").innerHTML = (totalCompleted)
+    // ${this.completed ? 'text-decoration: line-through;' : ''
   }
 
   async addToDo(newTask) {
@@ -26,11 +32,12 @@ class ToDosService {
     const res = await sandBoxApi.put('LaceyBaughman/todos/' + found.id, found)
     ProxyState.todos = ProxyState.todos
   }
-  removeToDo(id) {
-    const todos = ProxyState.todos.filter(v => v.id !== id)
-    ProxyState.todos = todos
+  async removeToDo(id) {
+    let todos = ProxyState.todos
+    const found = todos.find(ToDo => id == ToDo.id)
+    const res = await sandBoxApi.delete('LaceyBaughman/todos/' + found.id, found)
+    ProxyState.todos = ProxyState.todos.filter(v => v.id !== id)
   }
 }
 
 export const toDosService = new ToDosService();
-

@@ -49,9 +49,18 @@ export class ToDosController {
     Pop.toast('Great Job!')
   }
   async removeToDo(id) {
-    const yes = await Pop.confirm('Remove task?')
-    if (yes) {
-      toDosService.removeToDo(id)
+    try {
+      if (await Pop.confirm()) {
+        await toDosService.removeToDo(id)
+      }
+    } catch (error) {
+      console.error(error)
+      Pop.error(error)
     }
   }
 }
+
+
+// const yes = await Pop.confirm('Remove task?')
+// if (yes) {
+//   toDosService.removeToDo(id)
