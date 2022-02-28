@@ -51,9 +51,12 @@
 
           <!----ToDo-Form---->
           <form class="todo-styling" onsubmit="app.toDosController.addToDo()">
-            <div class="col p-3">
-              <h2>
+            <div class="row py-2 d-flex align-items-center">
+              <h2 class="col-md-6">
                 To Dos:</h2>
+              <span class="col-md-6">
+                <h2 id="todos-count"></h2>
+              </span>
             </div>
             <div class="row align-items-center">
               <div class="col p-3" id="todos">
@@ -74,9 +77,9 @@
         </div>
 
 
-        <div class="col-md-4 center-col">
+        <div class="col-md-7 center-col">
           <div class="row">
-            <div class="col time-styling" id="time">
+            <div class="col time-styling text-clip" id="time">
               <!----Time---->
             </div>
           </div>

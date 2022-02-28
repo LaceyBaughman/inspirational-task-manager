@@ -10,12 +10,11 @@ class ToDosService {
     const res = await sandBoxApi.get('LaceyBaughman/todos')
     console.log('[ToDoService]; getToDos', res.data)
     ProxyState.todos = res.data.map(t => new ToDo(t))
-    // let tasks = ProxyState.toDos
-    // let totalToDos = tasks.length
-    // let done = tasks.filter(done => done.completed == true)
-    // let totalCompleted = done.length
-    // document.getElementById("completed").innerHTML = (totalCompleted)
-    // ${this.completed ? 'text-decoration: line-through;' : ''
+    let tasks = ProxyState.todos
+    let totalToDos = tasks.length
+    let done = tasks.filter(done => done.completed == true)
+    let totalCompleted = done.length
+    document.getElementById("todos-count").innerHTML = `${totalCompleted} / ${totalToDos}`
   }
 
   async addToDo(newTask) {

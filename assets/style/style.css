@@ -30,10 +30,11 @@ height: 80px;
   background: rgba(223, 249, 253, 0.5);
   height: fit-content;
   border-radius: 15px 15px 15px 15px;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
-  font-size: x-large;
-  font-family: 'Secular One', sans-serif
+  font-size: 2cm;
+  font-family: 'Secular One', sans-serif;
+  
 }
 
 .quote-styling {
@@ -77,3 +78,4 @@ align-content: center;
 height: 100px;
 text-align: center;
 }
+
